@@ -18,35 +18,8 @@ circle that trails the mouse (and finger drags on touch devices).
 
 ## Run locally
 
-Just open `index.html` in a browser — or use VS Code's **Live Server**
+use VS Code's **Live Server**
 extension for auto-reload.
 
 ---
 
-## Publish on GitHub Pages (no Actions needed)
-
-1. Push these files to the **root** of your repository on the `main` branch:
-
-   ```bash
-   git init
-   git add index.html style.css script.js README.md
-   git commit -m "Lithos hero"
-   git branch -M main
-   git remote add origin https://github.com/<your-username>/<your-repo>.git
-   git push -u origin main
-   ```
-
-2. On GitHub: repo → **Settings → Pages**.
-
-3. Under **Build and deployment**:
-   - **Source**: *Deploy from a branch*
-   - **Branch**: `main` · folder: `/(root)` → **Save**.
-
-4. Wait about a minute, then open:
-
-   ```
-   https://<your-username>.github.io/<your-repo>/
-   ```
-
-The repository must be **public** on GitHub Free. Hard-refresh with
-`Ctrl+Shift+R` if your browser cached an older version.
