@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Yogendra — Lithos. Interactive geology hero with a cursor-following spotlight that reveals the layers beneath."
+    />
+    <meta name="theme-color" content="#000000" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 256 256'%3E%3Cpath fill='%23ffffff' d='M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z'/%3E%3C/svg%3E"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Yogendra — Lithos</title>
+  </head>
+  <body>
+    <!-- ============================== Nav ============================== -->
+    <nav class="nav">
+      <a href="#" class="nav-logo">
+        <svg
+          width="26"
+          height="26"
+          viewBox="0 0 256 256"
+          fill="#ffffff"
+          xmlns="http://www.w3.org/2000/svg"
+          aria-hidden="true"
+        >
+          <path d="M 256 256 L 128 256 L 0 128 L 128 128 Z M 256 128 L 128 128 L 0 0 L 128 0 Z" />
+        </svg>
+        <span class="nav-wordmark">Lithos</span>
+      </a>
+
+      <!-- Sign Up (desktop only) -->
+      <button class="nav-signup">Sign Up</button>
+
+      <!-- Hamburger (mobile only) -->
+      <button class="nav-burger" aria-label="Open menu">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          aria-hidden="true"
+        >
+          <line x1="4" x2="20" y1="12" y2="12" />
+          <line x1="4" x2="20" y1="6" y2="6" />
+          <line x1="4" x2="20" y1="18" y2="18" />
+        </svg>
+      </button>
+    </nav>
+
+    <!-- ============================== Hero ============================== -->
+    <section class="hero">
+      <!-- 1 · Base image (slow Ken Burns zoom-out) -->
+      <div class="base-image hero-zoom"></div>
+
+      <!-- 2 · Hidden canvas that generates the spotlight mask -->
+      <canvas id="maskCanvas" class="mask-canvas"></canvas>
+
+      <!-- 3 · Second image, revealed only inside the spotlight circle -->
+      <div id="revealLayer" class="reveal-layer"></div>
+
+      <!-- 4 · Heading -->
+      <div class="hero-heading">
+        <h1>
+          <span
+            class="hero-title hero-anim hero-reveal"
+            style="letter-spacing: -0.05em; animation-delay: 0.25s"
+            >Yogendra</span
+          >
+        </h1>
+      </div>
+
+      <!-- 5 · Bottom-left paragraph -->
+      <div class="hero-bl hero-anim hero-fade" style="animation-delay: 0.7s">
+        <p>
+          Every layer of sediment records a chapter of our planet, from ancient
+          seabeds to drifting ash, layered across millions of years beneath us.
+        </p>
+      </div>
+
+      <!-- 6 · Bottom-right details + CTA -->
+      <div class="hero-br hero-anim hero-fade" style="animation-delay: 0.85s">
+        <div class="hero-details">
+          <a class="detail-row" href="mailto:y.sainikataria@gmail.com">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect width="20" height="16" x="2" y="4" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>Y.sainikataria@gmail.com</span>
+          </a>
+          <div class="detail-row">
+            <svg
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path
+                d="M21.42 10.922a1 1 0 0 0-.019-1.838L12.83 5.18a2 2 0 0 0-1.66 0L2.6 9.08a1 1 0 0 0 0 1.832l8.57 3.908a2 2 0 0 0 1.66 0z"
+              />
+              <path d="M22 10v6" />
+              <path d="M6 12.5V16a6 3 0 0 0 12 0v-3.5" />
+            </svg>
+            <span class="detail-text"
+              >Currently studying at Tribhuvan College, Neemrana</span
+            >
+          </div>
+        </div>
+        <button class="cta">Start Digging</button>
+      </div>
+    </section>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
